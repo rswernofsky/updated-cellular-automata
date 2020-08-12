@@ -13,6 +13,8 @@ It models simple binary rule-based cellular automata, arranged in a line. The pr
 * no longer having separate objects for `Cell`s with different rules: `Rule30Cell`, `InertCell`, etc objects don't take advantage of dynamic dispatch, which is one of the main advantages of representing types as objects. So for the sake of simplicity, I just let a cell's "rule" be a variable
 
 ## Notes for running
-Interesting "rule"s to use: 30, 54, 60, 182
+This program uses the arguments that the main method receives as input (`String[] args`). Set up a run configuration that just contains the rule (a number) (in IntelliJ this is the box labeled "program arguments").
+![a screenshot of my run configurations](runConfigurations.png)
 
-This program uses the arguments that the main method receives as input (`String[] args`). Set up a run configuration that just contains a number (in IntelliJ this is the box labeled "program arguments").
+Interesting rules to use: 30, 54, 60, 182. Here's rule 182 in action:
+![a screenshot of rule 182 in action](182.png)
