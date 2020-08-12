@@ -4,16 +4,23 @@ import java.awt.*;
 
 import model.Cell;
 
+import static cellularAutomata.CellularAutomata.CELL_SIZE;
+
 /**
- * Adds drawing capabilities to {@link model.Cell}s (allows them to act as {@link DrawableCell}s).
+ * Adds drawing capabilities to {@link Cell}s (allows them to act as {@link Drawable}s).
  */
-public class DrawableCellAdapter implements DrawableCell {
+public class DrawableCellAdapter implements Drawable {
 
   private final Cell cell;
-  public static final int CELL_SIZE = 20;
   private final int row;
   private final int col;
 
+  /**
+   * Constructs a new drawable cell adaptation using the given location in grid coordinates.
+   * @param cell the cell to draw
+   * @param row the row to draw the cell at
+   * @param col the column to draw the cell at
+   */
   public DrawableCellAdapter(Cell cell, int row, int col) {
     this.cell = cell;
     this.row = row;
